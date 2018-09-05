@@ -31,4 +31,16 @@ if (filmArray.length > 0) {
 }
 return result;
 };
+
+Cinema.prototype.allFilmsOver = function (time) {
+let result = null;
+let filmArray = [];
+filmArray = this.films.filter(film => film.length <= time);
+if (filmArray.length > 0) {
+  result = false;
+} else {
+  result = true;
+}
+return result;
+};
 module.exports = Cinema;
