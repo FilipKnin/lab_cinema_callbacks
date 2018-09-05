@@ -29,10 +29,15 @@ describe('Cinema', function () {
   });
 
   it('should be able to get a list of film titles', function () {
-    const actual = cinema.titlesOfFilms()
+    const actual = cinema.titlesOfFilms();
     assert.deepStrictEqual(actual, ['Moonlight', 'Blade Runner 2049', 'Dunkirk', 'Black Panther', 'T2 Trainspotting'])
   });
-  it('should be able to find a film by title');
+
+  it('should be able to find a film by title', function () {
+    const actual = cinema.findByTitle('Dunkirk');
+    assert.deepStrictEqual( actual, dunkirk )
+  });
+
   it('should be able to filter films by genre');
   it('should be able to check whether there are some films from a particular year');
   it('should be able to check whether there are no films from a particular year');
