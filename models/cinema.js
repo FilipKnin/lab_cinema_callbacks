@@ -43,4 +43,9 @@ if (filmArray.length > 0) {
 }
 return result;
 };
+
+Cinema.prototype.totalRunningTime = function () {
+  let result = this.films.reduce((totalTime, film) => totalTime + film.length, 0);
+  return result;
+};
 module.exports = Cinema;
