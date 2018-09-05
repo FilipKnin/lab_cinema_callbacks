@@ -43,8 +43,16 @@ describe('Cinema', function () {
     assert.deepStrictEqual( actual, [moonlight, trainspotting]);
   });
 
-  it('should be able to check whether there are some films from a particular year');
-  it('should be able to check whether there are no films from a particular year');
+  it('should be able to check whether there are some films from a particular year', function() {
+    const actual = cinema.filmFromYear(2016);
+    assert.strictEqual(actual, true);
+  });
+
+  it('should be able to check whether there are no films from a particular year', function() {
+    const actual2 = cinema.filmFromYear(1026);
+    assert.strictEqual(actual2, false);
+  });
+
   it('should be able to check whether all films are over a particular length');
   it('should be able to calculate total running time of all films');
 
