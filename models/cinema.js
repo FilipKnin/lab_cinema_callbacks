@@ -14,4 +14,9 @@ Cinema.prototype.findByTitle = function (title) {
   } )
   return found;
 };
+
+Cinema.prototype.genreFilter = function (genre) {
+  let found = this.films.filter( film => film.genre === genre );
+  return found;
+};
 module.exports = Cinema;
